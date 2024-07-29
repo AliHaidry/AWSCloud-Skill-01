@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: devopsified-gowebapp
-        image: <200401073>/devopsified-gowebapp-v1
+        image: 200401073/devopsified-gowebapp:v1
         ports:
         - containerPort: 8080
