@@ -1,0 +1,22 @@
+# This is a sample deployment manifest file for a simple web application.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsified-gowebapp
+  labels:
+    app: devopsified-gowebapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devopsified-gowebapp
+  template:
+    metadata:
+      labels:
+        app: devopsified-gowebapp
+    spec:
+      containers:
+      - name: devopsified-gowebapp
+        image: 200401073/devopsified-gowebapp:v1
+        ports:
+        - containerPort: 8080
